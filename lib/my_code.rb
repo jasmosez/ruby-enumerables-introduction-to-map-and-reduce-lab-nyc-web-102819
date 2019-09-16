@@ -7,9 +7,11 @@ def map_to_negativize(source_array)
   source_array
 end
 
+
 def map_to_no_change(source_array)
   source_array
 end
+
 
 def map_to_double(source_array)
   i = 0
@@ -20,12 +22,31 @@ def map_to_double(source_array)
   source_array
 end
 
+
 def map_to_square(source_array)
+  i = 0
+  while i < source_array.length do
+    source_array[i] = (source_array[i] ** 2)
+    i += 1
+  end
   source_array
 end
 
+
 def reduce_to_total(source_array, starting_point)
+  i = starting_point
+  while i < source_array.length do
+    result += source_array[i]
+    i += 1
+  end
+  i = 0
+  while i < starting_point do
+    result += source_array[i]
+    i += 1
+  end
+  source_array
 end
+
 
 def reduce_to_all_true(source_array)
 end
